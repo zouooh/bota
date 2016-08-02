@@ -1,0 +1,58 @@
+<resources>
+
+    <dimen name="burro_size_2dp">2dp</dimen>
+    <dimen name="burro_size_4dp">4dp</dimen>
+    <dimen name="burro_size_6dp">6dp</dimen>
+    <dimen name="burro_size_8dp">8dp</dimen>
+    <dimen name="burro_size_10dp">10dp</dimen>
+    <dimen name="burro_size_12dp">12dp</dimen>
+    <dimen name="burro_size_14dp">14dp</dimen>
+    <dimen name="burro_size_16dp">16dp</dimen>
+    <dimen name="burro_size_18dp">18dp</dimen>
+    <dimen name="burro_size_20dp">20dp</dimen>
+    <dimen name="burro_size_24dp">24dp</dimen>
+    <dimen name="burro_size_30dp">30dp</dimen>
+    <dimen name="burro_size_36dp">36dp</dimen>
+    <dimen name="burro_size_40dp">40dp</dimen>
+    <dimen name="burro_size_48dp">48dp</dimen>
+    <dimen name="burro_size_50dp">50dp</dimen>
+    <dimen name="burro_size_60dp">60dp</dimen>
+    <dimen name="burro_size_70dp">70dp</dimen>
+    <dimen name="burro_size_72dp">72dp</dimen>
+    <dimen name="burro_size_80dp">80dp</dimen>
+    <dimen name="burro_size_84dp">84dp</dimen>
+    <dimen name="burro_size_90dp">90dp</dimen>
+    <dimen name="burro_size_96dp">96dp</dimen>
+    <dimen name="burro_size_100dp">100dp</dimen>
+    <dimen name="burro_size_120dp">120dp</dimen>
+    <dimen name="burro_size_160dp">160dp</dimen>
+
+    <dimen name="burro_split_line">0.5dp</dimen>
+
+    <dimen name="burro_space_small">@dimen/burro_size_2dp</dimen>
+    <dimen name="burro_space_msmall">@dimen/burro_size_4dp</dimen>
+    <dimen name="burro_space_medium">@dimen/burro_size_6dp</dimen>
+    <dimen name="burro_space_mlarge">@dimen/burro_size_8dp</dimen>
+    <dimen name="burro_space_large">@dimen/burro_size_10dp</dimen>
+    <dimen name="burro_space_xlarge">@dimen/burro_size_20dp</dimen>
+
+    <dimen name="burro_icon_small">@dimen/burro_size_12dp</dimen>
+    <dimen name="burro_icon_medium">@dimen/burro_size_24dp</dimen>
+    <dimen name="burro_icon_large">@dimen/burro_size_36dp</dimen>
+
+    <dimen name="burro_avatar_small">@dimen/burro_size_24dp</dimen>
+    <dimen name="burro_avatar_medium">@dimen/burro_size_48dp</dimen>
+    <dimen name="burro_avatar_large">@dimen/burro_size_72dp</dimen>
+
+    <dimen name="burro_cell_height">44dp</dimen>
+    <dimen name="burro_actionbar_size">48dp</dimen>
+
+    <dimen name="burro_text_large">16sp</dimen>
+    <dimen name="burro_text_default">14sp</dimen>
+    <dimen name="burro_text_medium">12sp</dimen>
+    <dimen name="burro_text_min">10sp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+</resources>

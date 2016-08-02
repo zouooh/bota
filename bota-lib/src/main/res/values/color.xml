@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#ff000000</color>
+    <color name="white">#ffffffff</color>
+    <color name="burro_background">#fefefe</color>
+    <color name="burro_gray_background">#e8e8e8</color>
+    <color name="burro_primary">#eb4646</color>
+    <color name="burro_primary_dark">@color/burro_primary</color>
+    <color name="burro_primary_accent">@color/burro_primary</color>
+    <color name="burro_text_color">#353535</color>
+    <color name="burro_text_gray_color">@color/abc_secondary_text_material_light</color>
+</resources>

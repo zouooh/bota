@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tl="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/burro__frame"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/burro__toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <FrameLayout
+        android:id="@+id/burro__container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        android:background="@color/burro_background" >
+    </FrameLayout>
+
+    <com.flyco.tablayout.CommonTabLayout
+        android:id="@+id/burro__tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#ffffff"
+        tl:tl_iconHeight="24dp"
+        tl:tl_iconWidth="24dp"
+        tl:tl_indicator_color="?attr/colorPrimary"
+        tl:tl_indicator_height="0dp"
+        tl:tl_textSelectColor="?attr/colorPrimary"
+        tl:tl_textUnselectColor="@color/burro_text_color"
+        tl:tl_textsize="12sp"
+        tl:tl_underline_color="#DDDDDD"
+        tl:tl_underline_gravity="TOP"
+        tl:tl_underline_height="1dp" />
+</LinearLayout>

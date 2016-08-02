@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:paddingTop="@dimen/burro_space_msmall"
+    android:paddingBottom="@dimen/burro_space_msmall"
+    android:background="@color/burro_gray_background"
+    android:gravity="left"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/burro_space_large"
+        android:textColor="#666666"
+        android:textSize="12sp" />
+
+</LinearLayout>

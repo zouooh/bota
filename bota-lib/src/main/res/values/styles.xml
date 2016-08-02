@@ -1,0 +1,50 @@
+<resources>
+	
+    <style name="BurroTheme" parent="Theme.AppCompat.Light.NoActionBar">
+       
+    </style>
+
+    <style name="BurroTheme.Base" parent="BurroTheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/Animation.Activity.Translucent.Style</item>  
+        <item name="colorPrimary">@color/burro_primary</item>
+        <item name="colorPrimaryDark">@color/burro_primary_dark</item>
+        <item name="actionBarSize">@dimen/burro_actionbar_size</item>
+        <item name="colorAccent">@color/burro_primary_accent</item>
+        <item name="android:textColorPrimary">@color/burro_text_color</item>
+        <item name="android:textColorPrimaryInverse">@color/burro_text_color</item>
+        <item name="android:textColorTertiary">@color/burro_text_color</item>  
+        <item name="android:textAppearance">@style/Burro.TextAppearance</item>
+        <item name="android:textAppearanceSmall">@style/Burro.TextAppearance</item>
+    </style>
+    
+    
+    
+    <style name="BurroTheme.Base.Main">
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+
+    <style name="BurroTheme.Base.Launcher">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    
+    <style name="Animation.Activity.Translucent.Style" parent="@android:style/Animation.Activity">
+       <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+       <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+   </style>
+   
+    
+    <style name="Burro">
+    </style>
+  
+	
+	<style name = "Burro.TextAppearance" parent="Base.TextAppearance.AppCompat">
+	     <item name="android:textSize">@dimen/burro_text_default</item>
+	</style>
+
+	
+	<style name="Animation.Popup" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+</resources>
