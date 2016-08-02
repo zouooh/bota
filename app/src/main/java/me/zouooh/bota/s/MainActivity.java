@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import me.zouooh.bota.TabActivity;
+import me.zouooh.slark.Slark;
 
 public class MainActivity extends TabActivity {
 
@@ -19,9 +20,15 @@ public class MainActivity extends TabActivity {
 
     @Override
     protected void init() {
+        //test
+        Slark.init(getApplicationContext());
         for (int i = 0; i < mTitles.length; i++) {
             tabEntities.add(new TabEntity(mTitles[i], mIconSelectIds[i],
                     mIconUnselectIds[i]));
+            if (i==0){
+                fragments.add(new GridFragment());
+                continue;
+            }
             fragments.add(PlaceholderFragment.newInstance(i));
         }
     }

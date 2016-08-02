@@ -5,6 +5,7 @@ import com.bumptech.glide.RequestManager;
 import me.zouooh.bota.http.JsonResponse;
 import me.zouooh.invoker.OnItemListener;
 import me.zouooh.slark.request.Request;
+import me.zouooh.slark.request.RequestConfig;
 import me.zouooh.slark.request.SlarkGet;
 import me.zouooh.slark.response.Progress;
 import me.zouooh.slark.task.Queue;
@@ -39,28 +40,32 @@ public abstract class GetAdapter extends RecordAdapter {
         setProgress(progress);
     }
 
-    public void load() {
+    public GetAdapter load() {
         if (isRequesting()){
-            return;
+            return this;
         }
         SlarkGet slarkGet = slarkGet();
         if (slarkGet == null) {
             if (getProgress() != null) {
                 getProgress().onRequestEnd(null);
             }
-            return;
+            return this;
         }
         slarkGet.progress(getProgress());
         queue().submitRequest(slarkGet);
+        return this;
     }
 
     protected void reset() {
+        if (slarkGet!=null){
+            queue().destory(slarkGet);
+        }
     }
 
     protected abstract void adapterData(Record record);
 
     protected SlarkGet slarkGet() {
-        SlarkGet slarkGet = newGet();
+        SlarkGet slarkGet = (SlarkGet) newGet();
         if (slarkGet == null) {
             return null;
         }
@@ -73,14 +78,14 @@ public abstract class GetAdapter extends RecordAdapter {
         if (slarkGet == null){
             return  false;
         }
-        return  slarkGet.isFinish();
+        return  !slarkGet.isFinish()||!slarkGet.isCanceled();
     }
 
     public Progress getProgress() {
         return progress;
     }
 
-    protected abstract SlarkGet newGet();
+    protected abstract RequestConfig newGet();
 
     public void refresh() {
         reset();

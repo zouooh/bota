@@ -78,6 +78,7 @@ public abstract class RecyclerViewFragment extends BaseFragment
 
 	@Override
 	public void onRequestFailure(Request antsRequest, Throwable throwable) {
+		throwable.printStackTrace();
 	}
 
 	@Override
@@ -86,6 +87,15 @@ public abstract class RecyclerViewFragment extends BaseFragment
 
 	@Override
 	public void onRequestSucess(Request antsRequest) {
+	}
+
+	@Override
+	public boolean loading() {
+		return false;
+	}
+
+	@Override
+	public void tip(String msg) {
 	}
 
 	@Override

@@ -36,12 +36,14 @@ public abstract class GetListAdapter extends GetAdapter {
 	@Override
 	protected void adapterData(Record record) {
 		clearDatas();
-		List<Record> records = record.getRecordList("datas");
+		List<Record> records = record.getRecordList("rows");
 		addDatas(records);
 	}
 
 	protected void addDatas(List<Record> records) {
-		getDatas().addAll(records);
+		if (records!=null){
+			getDatas().addAll(records);
+		}
 	}
 
 

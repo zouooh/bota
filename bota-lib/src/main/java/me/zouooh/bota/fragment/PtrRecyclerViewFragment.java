@@ -170,7 +170,7 @@ public abstract class PtrRecyclerViewFragment extends
 		ptrFrameLayout.setResistance(2.3f);
 		ptrFrameLayout.setRatioOfHeaderHeightToRefresh(1.2f);
 		ptrFrameLayout.setDurationToClose(300);
-		ptrFrameLayout.setDurationToCloseHeader(2000);
+		ptrFrameLayout.setDurationToCloseHeader(1000);
 		ptrFrameLayout.setPullToRefresh(false);
 		ptrFrameLayout.setKeepHeaderWhenRefresh(true);
 	}
