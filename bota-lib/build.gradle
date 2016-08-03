@@ -30,3 +30,4 @@ dependencies {
     compile 'me.zouooh:slark-lib:1.0.4@aar'
     compile 'me.zouooh:invoker-lib:1.0@aar'
 }
+apply from: "bintrayUpload.gradle"
