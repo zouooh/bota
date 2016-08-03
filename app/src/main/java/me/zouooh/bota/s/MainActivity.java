@@ -22,6 +22,7 @@ public class MainActivity extends TabActivity {
     protected void init() {
         //test
         Slark.init(getApplicationContext());
+        Slark.host(Slark.DATAS_HOST,"http://www.seqi360.com");
         for (int i = 0; i < mTitles.length; i++) {
             tabEntities.add(new TabEntity(mTitles[i], mIconSelectIds[i],
                     mIconUnselectIds[i]));

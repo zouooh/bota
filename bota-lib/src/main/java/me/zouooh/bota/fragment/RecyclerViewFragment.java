@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import me.zouooh.bota.R;
+import me.zouooh.bota.adapter.RecordAdapter;
 import me.zouooh.invoker.IndexPath;
 import me.zouooh.invoker.InvokerAdapter;
 import me.zouooh.invoker.InvokerDecoration;
@@ -25,18 +26,21 @@ public abstract class RecyclerViewFragment extends BaseFragment
 
 	protected abstract void configRecyclerView();
 
-	protected void decorationRecyclerView() {
-		getRecyclerView().addItemDecoration(new InvokerDecoration(getContext()));
-	}
-
 	public Adapter<? extends ViewHolder> getAdapter() {
 		if (adapter == null) {
 			adapter = newAdapter();
 		}
 		return adapter;
 	}
-	
-	@SuppressWarnings("unchecked")
+
+	public InvokerAdapter invokerAdapter() {
+		Adapter<? extends ViewHolder> adapter = getAdapter();
+		if (adapter instanceof InvokerAdapter) {
+			return (InvokerAdapter) adapter;
+		}
+		throw new RuntimeException("adapter is not InvokerAdapter");
+	}
+
 	public <T extends Adapter<?extends ViewHolder>> T getAdapterOf() {
 		Adapter<? extends ViewHolder> adapter = getAdapter();
 		if (adapter instanceof InvokerAdapter) {
@@ -104,7 +108,6 @@ public abstract class RecyclerViewFragment extends BaseFragment
 		getRecyclerView().setHasFixedSize(true);
 		getRecyclerView().setItemAnimator(new DefaultItemAnimator());
 		configRecyclerView();
-		decorationRecyclerView();
 		getRecyclerView().setAdapter(getAdapter());
 	}
 

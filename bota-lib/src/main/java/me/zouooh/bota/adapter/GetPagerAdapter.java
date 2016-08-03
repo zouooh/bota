@@ -37,8 +37,12 @@ public abstract class GetPagerAdapter extends GetListAdapter {
     protected void adapterData(Record record) {
         super.adapterData(record);
         if (isFirstPage()) {
-            pager.setTotal(record.getInt("rows"));
+           pagerInfo(record);
         }
+    }
+
+    protected void pagerInfo(Record record){
+        pager.setTotal(record.getInt("total"));
     }
 
     @Override
@@ -85,10 +89,7 @@ public abstract class GetPagerAdapter extends GetListAdapter {
     }
 
     protected void nextPage() {
-        if (slarkGet == null) {
-            return;
-        }
-        if (!slarkGet.isFinish()) {
+        if (isRequesting()){
             return;
         }
         pager.nextPage();

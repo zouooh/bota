@@ -27,6 +27,6 @@ dependencies {
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'org.greenrobot:eventbus:3.0.0'
     compile 'in.srain.cube:ultra-ptr:1.0.11'
-    compile 'me.zouooh:slark-lib:1.0.3@aar'
+    compile 'me.zouooh:slark-lib:1.0.4@aar'
     compile 'me.zouooh:invoker-lib:1.0@aar'
 }

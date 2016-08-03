@@ -78,7 +78,7 @@ public abstract class GetAdapter extends RecordAdapter {
         if (slarkGet == null){
             return  false;
         }
-        return  !slarkGet.isFinish()||!slarkGet.isCanceled();
+        return  !slarkGet.isFinish()&&!slarkGet.isPause();
     }
 
     public Progress getProgress() {
