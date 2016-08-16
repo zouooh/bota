@@ -1,7 +1,9 @@
 package me.zouooh.bota;
 
 public class BurroEvent {
-	
+
+	public static final int AUTH_401 = 401;
+
 	public static BurroEvent event(int code){
 		return new BurroEvent(code);
 	}
